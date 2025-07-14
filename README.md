@@ -237,7 +237,7 @@ This is useful if you ex. would want to route all traffic through a AWS Network 
 You disable the creation by setting the var.public_enable_default_route variable ex.
 
 ```hcl
-  public_disable_default_route = false  # <= By default it is true to maintain existing behavior
+  public_enable_default_route = false  # <= By default it is true to maintain existing behavior
 ```
 
 ## Examples
