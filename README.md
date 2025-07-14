@@ -233,6 +233,12 @@ module "vpc_cidr_from_ipam" {
 
  Disabling the creation of the default route is useful if you want the default route to point to gateways other than the Internet Gateway (IGW).
 
+ You disable the creation by setting the var.public_enable_default_route variable ex.
+
+```hcl
+  public_disable_default_route = false  # <= By default it is true to maintain existing behavior
+```
+
 ## Examples
 
 - [Complete VPC](https://github.com/terraform-aws-modules/terraform-aws-vpc/tree/master/examples/complete) with VPC Endpoints.
