@@ -280,6 +280,12 @@ variable "public_enable_default_route" {
   default     = true
 }
 
+variable "create_public_route_association" {
+  description = "Option to associate public route tables"
+  type        = bool
+  default     = true
+}
+
 ################################################################################
 # Public Network ACLs
 ################################################################################
