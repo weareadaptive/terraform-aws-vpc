@@ -228,6 +228,17 @@ module "vpc_cidr_from_ipam" {
   public_subnets    = local.public_subnets
 }
 ```
+## Disable default route creation for public subnets
+
+Disabling the creation of the default can be used if you want have a default pointing to other gateways than the internet gateway(IGW)
+
+This is useful if you ex. would want to route all traffic through a AWS Network Firewall, but can also be useful for other purposes
+
+You disable the creation by setting the var.public_enable_default_route variable ex.
+
+```hcl
+  public_enable_default_route = false  # <= By default it is true to maintain existing behavior
+```
 
 ## Examples
 
